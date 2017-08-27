@@ -71,12 +71,12 @@ class CallMonitor {
     }
 
     if (data.type === 'ring') {
-      data.caller = message[3];
-      data.called = message[4];
+      data.external = message[3];
+      data.internal = message[4];
     } else if (data.type === 'call') {
       data.extension = message[3];
-      data.caller = message[4];
-      data.called = message[5];
+      data.internal = message[4];
+      data.external = message[5];
     } else if (data.type === 'connect') {
       data.extension = message[3];
       data.number = message[4];
